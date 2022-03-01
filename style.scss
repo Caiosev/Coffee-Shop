@@ -483,6 +483,247 @@ button {
     &__button{
         font-size: var(--normal-font-size);
         text-transform: uppercase;
-        
+        color: var(--title-color);
+        display: inline-flex;
+        align-items: center;
+        column-gap: .75rem;
+
     }
+
+    &__button i{
+        font-size: 1.25rem;
+        transition: .4s;
+    }
+    &__button:hover i{
+        transform: translateX(.25rem);
+    }
+}
+
+.logo{
+    background-color: #fff;
+}
+
+.logo__container{
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 2.5rem 2rem;
+    border-top: 1px solid var(--text-color-light);
+    padding-top: 2.5rem;
+}
+
+.logo__img{
+    width: 80px;
+    mix-blend-mode: luminosity;
+    opacity: .4;
+    transition: .4s;
+}
+
+.logo__img:hover{
+    opacity: 1;
+}
+
+.blog{
+    &__container{
+        padding-bottom: 2rem;
+    }
+
+    &__content{
+        row-gap: 3rem;
+    }
+
+    &__image{
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
+    &__img{
+        border-radius: 0.25rem;
+    }
+
+    &__button{
+        display: inline-flex;
+        background-color: #fff;
+        padding: 1.15rem;
+        border-radius: .5rem 0 .5rem 0;
+        font-size: 2rem;
+        color: var(--title-color);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__button i{
+        transform: rotate(-30deg);
+        transition: .4s;
+    }
+
+    &__button:hover i{
+        transform: rotate(-30deg) translateX(.25rem);
+    }
+
+    &__titulo{
+        font-size: var(--h2-font-size);
+        margin-bottom: .75rem;
+    }
+
+    &__desc{
+        margin-bottom: 1.5rem;
+    }
+
+    &__footer,
+    &__reaction{
+        display: flex;
+        align-items: center;
+    }
+
+    &__footer{
+        column-gap: 1.5rem;
+    }
+
+    &__reaction{
+        column-gap: .25rem;
+    }
+
+    &__reaction i{
+        font-size: 1.25rem;
+    }
+
+    &__reaction span{
+        font-size: var(--small-font-size);
+    }
+}
+
+.footer{
+    background-color: var(--black-color);
+    padding:  4rem 0 2.5rem;
+}
+
+.footer__titulo{
+    color: #fff;
+    font-size: var(--h1-font-size);
+    margin-bottom: 2rem;
+}
+
+.footer__desc{
+    margin-bottom: .75rem;
+}
+
+.footer_news{
+    display: flex;
+    column-gap: .5rem;
+}
+
+.footer__input{
+    border: none;
+    outline: none;
+    padding: 1.25rem 1rem;
+    border-radius: .25rem;
+    width: 70%;
+    color: var(--text-color);
+}
+
+.footer__button{
+    padding: .75rem;
+    font-size: 2rem;
+    border-radius: .25rem;
+    display: inline-flex;
+    background-color: var(--first-color);
+    transform: translateY(.6rem);
+
+}
+
+.footer__button i{
+    transform: rotate(-30deg);  
+    transition: .5s;
+
+}
+
+.footer__button i:hover{
+    transform: rotate(-30deg) translate(.25rem);
+}
+
+.footer__content{
+    row-gap: 1.5rem;
+
+    border-bottom: 1px solid var(--text-color);
+}
+
+.footer__sub{
+    color: #fff;
+    font-size: var(--h2-font-size);
+    margin-bottom: .75rem;
+}
+
+.footer__group{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.footer__social{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.footer__social-link{
+    color: #FFF;
+    transition: .4s;
+}
+
+.footer__social-link:hover{
+    color: var(--first-color);
+}
+
+.footer__copy{
+    font-size: var(--small-font-size);
+}
+
+::-webkit-scrollbar{
+    width: .6rem;
+    background-color: hsl(206, 4%, 80%);
+}
+
+::-webkit-scrollbar-thumb{
+    width: .6rem;
+    background-color: hsl(206, 4%, 64%);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    width: .6rem;
+    background-color: hsl(206, 4%, 48%);
+}
+
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    color: var(--title-color);
+    background-color: #FFF;
+    box-shadow: 0px 4px 12px hsla(206,4%,20%,.1);
+    display: inline-flex;
+    padding: .2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    z-index: var(--z-tooltip);
+    opacity: .9;
+    transition: .8s;
+
+    &:hover{
+        transform: translateY(-.5rem);
+        opacity: 1;
+    }
+    
+}
+
+.show-scroll{
+    bottom: 3rem;
+}
+
+.active-link{
+    color: #fff;
 }
