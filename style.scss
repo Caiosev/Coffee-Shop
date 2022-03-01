@@ -755,6 +755,7 @@ button {
         padding-bottom: 3rem;
     }
     .blog__content{
+        padding-top: 1rem;
         grid-template-columns: 450px;
         justify-content: center;
     }
@@ -773,7 +774,7 @@ button {
 
         &__toggle,
         &__close{
-            display: close;
+            display: none;
         }
         &__list{
             padding-top: 0;
@@ -819,15 +820,17 @@ button {
         &__scroll{
             bottom: 0;
             top: 0;
-            margin: 0;
+            margin: auto;
         }
     }
-    .produtos__filters{
+
+
+    .produtos__filtro{
         grid-template-columns: repeat(3,200px);
     }
     .quality__content,
     .footer__content{
-        grid-template-columns: repeat(2,1f1);
+        grid-template-columns: repeat(2,1fr);
         align-items: center;
     }
 }
@@ -882,7 +885,7 @@ button {
         margin-bottom: 1.5rem;
     }
 
-    .produtos__filters{
+    .produtos__filtro{
         margin: 4rem 0 5.5rem;
         column-gap: 4rem;
     }
@@ -994,7 +997,6 @@ button {
         max-width:1400px;
         margin-left: auto;
         margin-right: auto;
-
     }
     
 }
