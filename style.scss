@@ -855,86 +855,98 @@ button {
             top: 12px;
         }
     }
-    .espec__box{
-        display: grid;
-        grid-template-columns: 2fr .5fr;       
-    }
-    .espec__group{
-        text-align: initial;
-    }
-    .espec__category{
-        grid-template-columns: repeat(3,250px);
-        column-gap: 8rem;
-    }
-    .espec__line{
-        position: relative;
-        &:before{
-            content: '';
-            width: 1px;
-            height: 120px;
-            background-color: var(--text-color-light);
-            position: absolute;
-            right: -5rem;
-            top: 0;
-            bottom: 0;
-            margin: auto 0;
+    .espec{
+        &__box{
+            display: grid;
+            grid-template-columns: 2fr .5fr;       
+        }
+        &__group{
+            text-align: initial;
+        }
+        &__category{
+            grid-template-columns: repeat(3,250px);
+            column-gap: 8rem;
+        }
+        &__line{
+            position: relative;
+            &:before{
+                content: '';
+                width: 1px;
+                height: 120px;
+                background-color: var(--text-color-light);
+                position: absolute;
+                right: -5rem;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+            }
+        }
+        &__img{
+            width: 80px;
+            margin-bottom: 1.5rem;
         }
     }
-    .espec__img{
-        width: 80px;
-        margin-bottom: 1.5rem;
-    }
 
-    .produtos__filtro{
-        margin: 4rem 0 5.5rem;
-        column-gap: 4rem;
+    .prdutos{
+
+        &__filtro{
+            margin: 4rem 0 5.5rem;
+            column-gap: 4rem;
+        }
+        &__content{
+            grid-template-columns: repeat(3,265px);
+            justify-content: initial;
+            column-gap: 5rem;
+        }
+        &__card{
+            border-radius: .75rem;
+        }
+        &__img{
+            width: 200px;
+        }
+        &__shape{
+            padding: 2rem 0;
+            border-radius: .75rem .75rem 0 0;
+        }
+        &__data{
+            padding: 1rem 0 1.5rem 1.5rem;
+        }
+        &__nome{
+            font-size: var(--h3-font-size);
+        }
+        &__button{
+            font-size: 1.5rem;
+            padding: .75rem;
+            right: 1.5rem;
+            top: -1.5rem;
+        }
+
+
     }
-    .produtos__content{
-        grid-template-columns: repeat(3,265px);
-        justify-content: initial;
-        column-gap: 5rem;
+    
+    .quality{
+
+        &__content{
+            column-gap: 6rem;
+        }
+        &__images{
+            margin-top: 2rem;
+        }
+        &__img-big{
+            width: 428px;
+        }
+        &__img--small{
+            width: 155px;
+            transform: translateX(-7rem);
+        }
+        &__titulo{
+            margin-bottom: 1.5rem;
+        }
+        &__especial{
+            margin-bottom: 1rem;
+        }
     }
-    .produtos__card{
-        border-radius: .75rem;
-    }
-    .produtos__img{
-        width: 200px;
-    }
-    .produtos__shape{
-        padding: 2rem 0;
-        border-radius: .75rem .75rem 0 0;
-    }
-    .produtos__data{
-        padding: 1rem 0 1.5rem 1.5rem;
-    }
-    .produtos__nome{
-        font-size: var(--h3-font-size);
-    }
-    .produtos__button{
-        font-size: 1.5rem;
-        padding: .75rem;
-        right: 1.5rem;
-        top: -1.5rem;
-    }
-    .quality__content{
-        column-gap: 6rem;
-    }
-    .quality__images{
-        margin-top: 2rem;
-    }
-    .quality__img-big{
-        width: 428px;
-    }
-    .quality__img--small{
-        width: 155px;
-        transform: translateX(-7rem);
-    }
-    .quality__titulo{
-        margin-bottom: 1.5rem;
-    }
-    .quality__especial{
-        margin-bottom: 1rem;
-    }
+   
     .logo__container{
         grid-template-columns: repeat(5,1fr);
         padding: 3.5rem 0;
@@ -942,32 +954,37 @@ button {
     .logo__img{
         width: 120px;
     }
-    .blog__container{
-        padding-bottom: .5rem;
+    .blog{
+        &__container{
+            padding-bottom: .5rem;
+        }
+        &__content{
+            grid-template-columns: repeat(2,450px);
+            column-gap: 5rem;
+            padding-top: 2rem;
+        }
     }
-    .blog__content{
-        grid-template-columns: repeat(2,450px);
-        column-gap: 5rem;
-        padding-top: 2rem;
-    }
-    .footer__content{
-        grid-template-columns: repeat(4,max-width);
-        column-gap: 4rem;
-        padding-bottom: 5.5rem;
-    }
-    .footer__group{
-        margin-top: 3rem;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .footer__titulo{
-        font-size: var(--h2-font-size);
-    }
-    .footer__social{
-        column-gap: 2rem;
-    }
-    .footer__social-link{
-        font-size: 1.5rem;
+    .footer{
+        &__content{
+            grid-template-columns: repeat(4,max-width);
+            column-gap: 4rem;
+            padding-bottom: 5.5rem;
+        }
+        &__group{
+            margin-top: 3rem;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__titulo{
+            font-size: var(--h2-font-size);
+        }
+        &__social{
+            column-gap: 2rem;
+        }
+        &__social-link{
+            font-size: 1.5rem;
+        }
+
     }
     .scrollup{
         right: 3rem;
@@ -975,20 +992,24 @@ button {
 }
 
 @media screen and(min-width:1200px){
-    .home__container{
-        padding-top: 10rem;
-    }
-    .home__data{
-        padding-top: 3rem;
-    }
-    .home__titulo{
-        margin-bottom: 2rem;
-    }
-    .home__desc{
-        margin-bottom: 3rem;
-    }
-    .home__scroll{
-        width: 130px;
+    .home{
+
+        &__container{
+            padding-top: 10rem;
+        }
+        &__data{
+            padding-top: 3rem;
+        }
+        &__titulo{
+            margin-bottom: 2rem;
+        }
+        &__desc{
+            margin-bottom: 3rem;
+        }
+        &__scroll{
+            width: 130px;
+        }
+        
     }
 }
 
